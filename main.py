@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import json
 import os
-from keep import keep_alive
 from dotenv import load_dotenv
 load_dotenv() # load all the variables from the env file
 # Get configuration.json
@@ -59,5 +58,4 @@ async def on_ready():
 
 # 		await message.reply(response["AIResponse"].text)
 # 	await bot.process_commands(message)
-keep_alive()
 bot.run(os.getenv('TOKEN'))
